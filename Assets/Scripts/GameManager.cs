@@ -1,12 +1,18 @@
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
     private PlayerMovement player;
     static private GameManager instance;
     public AudioClip musicBackground;
+    public TextMeshProUGUI text;
+    
+    
+    private int coinsCollected = 0;
     public static GameManager Instance
     {
         get
@@ -37,4 +43,13 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
+
+    public void AddCoins()
+    {
+        coinsCollected++;
+        text.SetText($"{coinsCollected}");
+    }
+
+    
+    
 }

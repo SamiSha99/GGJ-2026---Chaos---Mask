@@ -12,11 +12,12 @@ GameObject:
   - component: {fileID: 3474052720592071461}
   - component: {fileID: 6090539026614830307}
   - component: {fileID: 7860713756463833875}
+  - component: {fileID: 6027383102434040050}
   - component: {fileID: 5941255119312974082}
   - component: {fileID: 4920151731484200263}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -140,6 +141,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &6027383102434040050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8979201995006632072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 721241715cb6c204d804c0f9bda0b04d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  world1: {fileID: 0}
+  world2: {fileID: 0}
 --- !u!114 &5941255119312974082
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -156,6 +171,7 @@ MonoBehaviour:
   jumpForce: 250
   isDead: 0
   landingSound: {fileID: 0}
+  text: {fileID: 0}
 --- !u!70 &4920151731484200263
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
