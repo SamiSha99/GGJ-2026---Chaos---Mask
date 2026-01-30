@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 
 public class SoundsManager : MonoBehaviour
@@ -20,9 +21,8 @@ public class SoundsManager : MonoBehaviour
     
     public void PlaySingle(AudioClip clip)
     {
-        Debug.Log("Playing death sound!!!");
         soundSFX.clip = clip;
-        soundSFX.Play();
+        soundSFX.PlayOneShot(soundSFX.clip);
     }
     
     public void PlayMusic(AudioClip clip)
@@ -30,4 +30,5 @@ public class SoundsManager : MonoBehaviour
         musicSFX.clip = clip;
         musicSFX.Play();
     }
+    
 }

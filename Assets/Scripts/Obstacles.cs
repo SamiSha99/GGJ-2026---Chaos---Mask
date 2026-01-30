@@ -4,7 +4,8 @@ using UnityEngine;
 public class Obstacles : MonoBehaviour
 {
     private PlayerMovement player;
-
+    public AudioClip deathSound;
+    
     private void Start()
     {
         if(player == null)
@@ -15,9 +16,11 @@ public class Obstacles : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            SoundsManager.Instance.PlaySingle(deathSound);
             Debug.Log(other.gameObject.name + " is dead");
-            player.isDead = true;
-            GameManager.Instance.Die();
+            StartCoroutine(GameManager.Instance.Die());
         }
     }
+
+    
 }

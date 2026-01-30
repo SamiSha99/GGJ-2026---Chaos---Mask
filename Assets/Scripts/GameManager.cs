@@ -1,3 +1,4 @@
+using System.Collections;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -8,13 +9,12 @@ public class GameManager : MonoBehaviour
 {
     private PlayerMovement player;
     static private GameManager instance;
-    public AudioClip musicBackground;
     public TextMeshProUGUI text;
+    public float deathDelay = 2f;
     
     
     private int coinsCollected = 0;
     
-    public AudioClip deathSound;
     
     public static GameManager Instance
     {
@@ -33,17 +33,11 @@ public class GameManager : MonoBehaviour
         if(player == null)
             player = FindObjectOfType<PlayerMovement>().GetComponent<PlayerMovement>();
     }
+    
 
-
-    void Update()
+    public IEnumerator Die()
     {
-        /*if (player.isDead|| player)
-            Die();*/
-    }
-
-    public void Die()
-    {
-        SoundsManager.Instance.PlaySingle(deathSound);
+        yield return new WaitForSeconds(deathDelay);
         Destroy(player.gameObject);
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }

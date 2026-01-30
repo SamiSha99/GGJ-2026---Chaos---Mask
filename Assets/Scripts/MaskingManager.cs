@@ -1,11 +1,15 @@
 using System;
 using UnityEngine;
+using Random = System.Random;
+
 
 public class MaskingManager : MonoBehaviour
 {
     public Transform playerTransform;
     public Transform cameraTransform;
     public MaskPosition currentMaskPosition;
+    public AudioClip[] teleportSounds;
+    
 
     public float distance = 21;
     
@@ -13,6 +17,10 @@ public class MaskingManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
+            int i = new Random().Next(0, teleportSounds.Length);
+            AudioClip clip = teleportSounds[i];
+            if (clip == null) return;
+            SoundsManager.Instance.PlaySingle(clip);
             SwitchMask();
         }
     }

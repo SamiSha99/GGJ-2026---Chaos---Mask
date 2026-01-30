@@ -9,34 +9,25 @@ public class PlayerMovement : MonoBehaviour
     public float moveSpeed = 5f;
     public float jumpForce = 10f;
     private float moveHorizontal;
-    public bool isDead = false;
-    public bool isGrounded = false;
     private Animator animator;
     private SpriteRenderer spriteRenderer;
-
-
-
-
+    private GroundCheck groundCheck;
+    
     public AudioClip jumpSound;
     void Start()
     {
-        isDead = false;
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
-
+        groundCheck = GetComponentInChildren<GroundCheck>();
     }
-
-
+    
     void Update()
     {
         moveHorizontal = Input.GetAxis("Horizontal");
-        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
+        if (groundCheck.IsGrounded && Input.GetKeyDown(KeyCode.Space))
         {
-            Debug.Log("Jump");
-            SoundsManager.Instance.PlaySingle(jumpSound);
-            rb.AddForce(Vector2.up * jumpForce);
-            isGrounded = false;
+            Jump();
         }
     }
 
@@ -53,14 +44,10 @@ public class PlayerMovement : MonoBehaviour
             animator.SetBool("walk", false);
     }
 
-    private void OnCollisionEnter2D(Collision2D other)
+    private void Jump()
     {
-        if (other.gameObject.CompareTag("Ground"))
-        {
-            isGrounded = true;
-        }
-
+        SoundsManager.Instance.PlaySingle(jumpSound);
+        rb.AddForce(Vector2.up * jumpForce);
     }
-
-
+    
 }

@@ -7,11 +7,13 @@ TagManager:
   - Obstacle
   - Ground
   - Coin
+  - Ladder
+  - Water
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Ground
   - Water
   - UI
   - 
@@ -55,6 +57,9 @@ TagManager:
     locked: 0
   - name: Decor Front
     uniqueID: 2813758133
+    locked: 0
+  - name: Water
+    uniqueID: 3532579223
     locked: 0
   m_RenderingLayers:
   - Default
