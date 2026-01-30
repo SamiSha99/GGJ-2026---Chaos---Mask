@@ -1,5 +1,6 @@
 using System;
 using NUnit.Framework.Constraints;
+using TMPro;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -16,6 +17,10 @@ public class PlayerMovement : MonoBehaviour
     public AudioClip landingSound;
     private Animator animator;
     private SpriteRenderer spriteRenderer;
+    public TextMeshProUGUI  text;
+    
+    
+   
 
     public AudioClip jumpSound;
     public AudioClip deathSound;
@@ -25,6 +30,7 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+
     }
 
     
@@ -71,6 +77,17 @@ public class PlayerMovement : MonoBehaviour
             isDead = true;
             SoundsManager.Instance.PlaySingle(deathSound);
             Destroy(gameObject);
+        }
+        if (gameObject.CompareTag("Ground"))
+        {
+            SoundsManager.Instance.PlaySingle(landingSound);
+        }
+
+        if (other.gameObject.CompareTag("Coin"))
+        {
+           
+            GameManager.Instance.AddCoins();
+            Destroy(other.gameObject);
         }
     }
 
