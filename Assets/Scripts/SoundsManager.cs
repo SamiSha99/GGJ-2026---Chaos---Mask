@@ -4,7 +4,7 @@ using UnityEngine;
 public class SoundsManager : MonoBehaviour
 {
     public static SoundsManager Instance;
-    
+    public AudioClip musicBackground;
     public AudioSource soundSFX;
     public AudioSource musicSFX;
 
@@ -15,6 +15,7 @@ public class SoundsManager : MonoBehaviour
         else if (Instance != this)
             Destroy(gameObject);
         DontDestroyOnLoad(gameObject);
+        PlayMusic(musicBackground);
     }
     
     public void PlaySingle(AudioClip clip)

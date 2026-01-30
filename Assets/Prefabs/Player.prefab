@@ -12,8 +12,12 @@ GameObject:
   - component: {fileID: 3474052720592071461}
   - component: {fileID: 6090539026614830307}
   - component: {fileID: 7860713756463833875}
+<<<<<<< Updated upstream
   - component: {fileID: 6027383102434040050}
   - component: {fileID: 6014149972325884059}
+=======
+  - component: {fileID: 7851477034758556120}
+>>>>>>> Stashed changes
   - component: {fileID: 5941255119312974082}
   - component: {fileID: 4920151731484200263}
   m_Layer: 0
@@ -102,7 +106,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -529074279
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 2575815558344410250, guid: 9206800f37d59cb408c4b6ad044bda76, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -140,9 +144,13 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
+<<<<<<< Updated upstream
 --- !u!114 &6014149972325884059
+=======
+--- !u!114 &7851477034758556120
+>>>>>>> Stashed changes
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -151,10 +159,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 8979201995006632072}
   m_Enabled: 1
   m_EditorHideFlags: 0
+<<<<<<< Updated upstream
   m_Script: {fileID: 11500000, guid: 85cf592573f327c409a4417022b3a9ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   climbSpeed: 4
+=======
+  m_Script: {fileID: 11500000, guid: 721241715cb6c204d804c0f9bda0b04d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  world1: {fileID: 0}
+  world2: {fileID: 0}
+>>>>>>> Stashed changes
 --- !u!114 &5941255119312974082
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -170,10 +186,16 @@ MonoBehaviour:
   moveSpeed: 3
   jumpForce: 250
   isDead: 0
+<<<<<<< Updated upstream
   landingSound: {fileID: 0}
   text: {fileID: 0}
   jumpSound: {fileID: 0}
   deathSound: {fileID: 0}
+=======
+  landingSound: {fileID: 8300000, guid: 1790d6658fcb82946b15a531ae9de93a, type: 3}
+  jumpSound: {fileID: 8300000, guid: 722bddacc6d6bcd40b2f5b0dd9082207, type: 3}
+  deathSound: {fileID: 8300000, guid: 33a8f86bcc1f5204785d162581f9311b, type: 3}
+>>>>>>> Stashed changes
 --- !u!70 &4920151731484200263
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

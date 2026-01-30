@@ -13,6 +13,9 @@ public class GameManager : MonoBehaviour
     
     
     private int coinsCollected = 0;
+    
+    public AudioClip deathSound;
+    
     public static GameManager Instance
     {
         get
@@ -27,7 +30,6 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        SoundsManager.Instance.PlayMusic(musicBackground);
         if(player == null)
             player = FindObjectOfType<PlayerMovement>().GetComponent<PlayerMovement>();
     }
@@ -35,12 +37,14 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        if (player.isDead)
-            RestartGame();
+        /*if (player.isDead|| player)
+            Die();*/
     }
 
-    public void RestartGame()
+    public void Die()
     {
+        SoundsManager.Instance.PlaySingle(deathSound);
+        Destroy(player.gameObject);
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
