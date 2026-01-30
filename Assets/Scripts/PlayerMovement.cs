@@ -10,10 +10,15 @@ public class PlayerMovement : MonoBehaviour
     private float moveHorizontal;
     private bool isJumping = false;
     public bool isDead = false;
+    bool wasGrounded = false;
+    bool isGrounded = false;
+    
     public AudioClip landingSound;
     private Animator animator;
     private SpriteRenderer spriteRenderer;
 
+    public AudioClip jumpSound;
+    public AudioClip deathSound;
     void Start()
     {
         isDead = false;
@@ -22,9 +27,21 @@ public class PlayerMovement : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
-
+    
     void Update()
     {
+       moveHorizontal =  Input.GetAxis("Horizontal");
+       if (Input.GetKeyDown(KeyCode.Space)&& isGrounded)
+       {
+           SoundsManager.Instance.PlaySingle(jumpSound);
+           rb.AddForce(Vector2.up * jumpForce);
+           isGrounded = false;
+       }
+       if (isGrounded && wasGrounded == false)
+       {
+           SoundsManager.Instance.PlaySingle(landingSound);
+       }
+       wasGrounded = isGrounded;
         moveHorizontal = Input.GetAxis("Horizontal");
         if (Input.GetKeyDown(KeyCode.Space) && !isJumping)
         {
@@ -32,7 +49,7 @@ public class PlayerMovement : MonoBehaviour
             isJumping = true;
         }
     }
-
+    
     private void FixedUpdate()
     {
         rb.linearVelocity = new Vector2(moveHorizontal * moveSpeed, rb.linearVelocity.y);
@@ -48,16 +65,12 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-        //SoundsManager.Instance.PlaySingle(landingSound);
-        isJumping = false;
+        isGrounded = true;
         if (other.gameObject.CompareTag("Obstacle"))
         {
             isDead = true;
+            SoundsManager.Instance.PlaySingle(deathSound);
             Destroy(gameObject);
-        }
-        if (gameObject.CompareTag("Ground"))
-        {
-            SoundsManager.Instance.PlaySingle(landingSound);
         }
     }
 
