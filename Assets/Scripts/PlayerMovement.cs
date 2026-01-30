@@ -13,7 +13,7 @@ public class PlayerMovement : MonoBehaviour
     public bool isDead = false;
     bool wasGrounded = false;
     bool isGrounded = false;
-    
+
     public AudioClip landingSound;
     private Animator animator;
     private SpriteRenderer spriteRenderer;
@@ -33,29 +33,29 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
-    
+
     void Update()
     {
-       moveHorizontal =  Input.GetAxis("Horizontal");
-       if (Input.GetKeyDown(KeyCode.Space)&& isGrounded)
-       {
-           SoundsManager.Instance.PlaySingle(jumpSound);
-           rb.AddForce(Vector2.up * jumpForce);
-           isGrounded = false;
-       }
-       if (isGrounded && wasGrounded == false)
-       {
-           SoundsManager.Instance.PlaySingle(landingSound);
-       }
-       wasGrounded = isGrounded;
         moveHorizontal = Input.GetAxis("Horizontal");
-        if (Input.GetKeyDown(KeyCode.Space) && !isJumping)
+        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
+            SoundsManager.Instance.PlaySingle(jumpSound);
             rb.AddForce(Vector2.up * jumpForce);
-            isJumping = true;
+            isGrounded = false;
         }
+        if (isGrounded && wasGrounded == false)
+        {
+            SoundsManager.Instance.PlaySingle(landingSound);
+        }
+        wasGrounded = isGrounded;
+        moveHorizontal = Input.GetAxis("Horizontal");
+        // if (Input.GetKeyDown(KeyCode.Space) && !isJumping)
+        // {
+        //     rb.AddForce(Vector2.up * jumpForce);
+        //     isJumping = true;
+        // }
     }
-    
+
     private void FixedUpdate()
     {
         rb.linearVelocity = new Vector2(moveHorizontal * moveSpeed, rb.linearVelocity.y);
