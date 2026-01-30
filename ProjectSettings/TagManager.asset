@@ -49,6 +49,9 @@ TagManager:
   - name: Ground
     uniqueID: 3286160727
     locked: 0
+  - name: Entity
+    uniqueID: 3765893017
+    locked: 0
   - name: Decor Front
     uniqueID: 2813758133
     locked: 0
