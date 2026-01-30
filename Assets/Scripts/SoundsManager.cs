@@ -16,7 +16,7 @@ public class SoundsManager : MonoBehaviour
             Destroy(gameObject);
         DontDestroyOnLoad(gameObject);
     }
-
+    
     public void PlaySingle(AudioClip clip)
     {
         soundSFX.clip = clip;
@@ -28,7 +28,4 @@ public class SoundsManager : MonoBehaviour
         musicSFX.clip = clip;
         musicSFX.Play();
     }
-    
-    
-    
 }

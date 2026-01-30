@@ -6,6 +6,7 @@ public class GameManager : MonoBehaviour
 {
     private PlayerMovement player;
     static private GameManager instance;
+    public AudioClip musicBackground;
     public static GameManager Instance
     {
         get
@@ -20,6 +21,7 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+        SoundsManager.Instance.PlayMusic(musicBackground);
         if(player == null)
             player = FindObjectOfType<PlayerMovement>().GetComponent<PlayerMovement>();
     }
@@ -27,7 +29,7 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        if(player.isDead)
+        if (player.isDead)
             RestartGame();
     }
 
