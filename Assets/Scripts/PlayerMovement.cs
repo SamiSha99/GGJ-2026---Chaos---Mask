@@ -12,7 +12,7 @@ public class PlayerMovement : MonoBehaviour
     private Animator animator;
     private SpriteRenderer spriteRenderer;
     private GroundCheck groundCheck;
-    
+
     public AudioClip jumpSound;
     void Start()
     {
@@ -21,7 +21,7 @@ public class PlayerMovement : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         groundCheck = GetComponentInChildren<GroundCheck>();
     }
-    
+
     void Update()
     {
         moveHorizontal = Input.GetAxis("Horizontal");
@@ -49,5 +49,5 @@ public class PlayerMovement : MonoBehaviour
         SoundsManager.Instance.PlaySingle(jumpSound);
         rb.AddForce(Vector2.up * jumpForce);
     }
-    
+
 }
