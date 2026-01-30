@@ -11,16 +11,13 @@ public class PlayerMovement : MonoBehaviour
     private float moveHorizontal;
     public bool isDead = false;
     public bool isGrounded = false;
-    
     private Animator animator;
     private SpriteRenderer spriteRenderer;
-    public TextMeshProUGUI  text;
-    
-    
-   
+
+
+
 
     public AudioClip jumpSound;
-    public AudioClip deathSound;
     void Start()
     {
         isDead = false;
@@ -33,16 +30,16 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-       moveHorizontal =  Input.GetAxis("Horizontal");
-       if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
-       {
-           Debug.Log("Jump");
-           SoundsManager.Instance.PlaySingle(jumpSound);
-           rb.AddForce(Vector2.up * jumpForce);
-           isGrounded = false;
-       }
+        moveHorizontal = Input.GetAxis("Horizontal");
+        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
+        {
+            Debug.Log("Jump");
+            SoundsManager.Instance.PlaySingle(jumpSound);
+            rb.AddForce(Vector2.up * jumpForce);
+            isGrounded = false;
+        }
     }
-    
+
     private void FixedUpdate()
     {
         rb.linearVelocity = new Vector2(moveHorizontal * moveSpeed, rb.linearVelocity.y);
@@ -62,6 +59,7 @@ public class PlayerMovement : MonoBehaviour
         {
             isGrounded = true;
         }
+
     }
 
 

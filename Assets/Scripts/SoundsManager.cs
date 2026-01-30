@@ -20,6 +20,7 @@ public class SoundsManager : MonoBehaviour
     
     public void PlaySingle(AudioClip clip)
     {
+        Debug.Log("Playing death sound!!!");
         soundSFX.clip = clip;
         soundSFX.Play();
     }
