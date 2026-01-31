@@ -16,6 +16,8 @@ public class SoundsManager : MonoBehaviour
         else if (Instance != this)
             Destroy(gameObject);
         DontDestroyOnLoad(gameObject);
+        if(musicSFX == null)
+            return;
         PlayMusic(musicBackground);
     }
     

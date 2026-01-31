@@ -7,8 +7,10 @@ public class MaskingManager : MonoBehaviour
 {
     public Transform playerTransform;
     public Transform cameraTransform;
+    public Animator animator;
     public MaskPosition currentMaskPosition;
     public AudioClip[] teleportSounds;
+    
     
 
     public float distance = 21;
@@ -30,18 +32,23 @@ public class MaskingManager : MonoBehaviour
         if (currentMaskPosition == MaskPosition.Left)
         {
             currentMaskPosition = MaskPosition.Right;
+            animator.SetBool("Mask2",true);
             playerTransform.position = new Vector3(distance + playerTransform.localPosition.x, playerTransform.localPosition.y, playerTransform.localPosition.z);
             cameraTransform.position = new Vector3(distance + cameraTransform.localPosition.x, cameraTransform.localPosition.y, cameraTransform.localPosition.z);
         }
         else if (currentMaskPosition == MaskPosition.Right)
         {
             currentMaskPosition = MaskPosition.Left;
+            animator.SetBool("Mask2",false);
             playerTransform.position = new Vector3(playerTransform.localPosition.x - distance, playerTransform.localPosition.y, playerTransform.localPosition.z);
             cameraTransform.position = new Vector3(cameraTransform.localPosition.x - distance, cameraTransform.localPosition.y, cameraTransform.localPosition.z);
 
         }
     }
+
+    
 }
+
 
 
 public enum  MaskPosition
