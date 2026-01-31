@@ -1,18 +1,13 @@
 using UnityEngine;
-using UnityEngine.Audio;
+using Slider = UnityEngine.UI.Slider;
 
 public class OptionsMenu : MonoBehaviour
 {
-    public AudioMixer audioMixer;
+    [SerializeField] Slider volumeSlider;
     
-    public void SetVolume(float volume)
+
+    public void ChangeVolume()
     {
-        audioMixer.SetFloat("Volume", volume);
-    }
-    
-    
-    public void setFullScreen(bool isFullScreen)
-    {
-        Screen.fullScreen = isFullScreen;
+        AudioListener.volume = volumeSlider.value;
     }
 }

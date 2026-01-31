@@ -1,13 +1,18 @@
 using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Audio;
+using UnityEngine.UIElements;
 
 public class SoundsManager : MonoBehaviour
 {
+    
+    
     public static SoundsManager Instance;
     public AudioClip musicBackground;
     public AudioSource soundSFX;
     public AudioSource musicSFX;
+    
 
     private void Awake()
     {
@@ -22,6 +27,7 @@ public class SoundsManager : MonoBehaviour
     private void Start()
     {
         PlayMusic(musicBackground);
+        
     }
 
     public void PlaySingle(AudioClip clip)
@@ -32,8 +38,7 @@ public class SoundsManager : MonoBehaviour
     
     public void PlayMusic(AudioClip clip)
     {
-        musicSFX.clip = clip;
+        musicSFX.clip = clip; ;
         musicSFX.Play();
     }
-    
 }

@@ -7164,7 +7164,7 @@ Tilemap:
       m_AnimatedSprites:
       - {fileID: -8003906554491563137, guid: e2f762d9df755a044abe93cf09d6bb33, type: 3}
       - {fileID: 403813026361821555, guid: e2f762d9df755a044abe93cf09d6bb33, type: 3}
-      m_AnimationSpeed: 1.2500001
+      m_AnimationSpeed: 1.25
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: 6, y: -5, z: 0}
@@ -8831,6 +8831,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2973259372149560992, guid: 90b037166317bba419c55d129d442a11, type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4578447973721082847, guid: 90b037166317bba419c55d129d442a11, type: 3}
       propertyPath: m_Name
       value: SoundManager
@@ -8945,10 +8949,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 283438875627746474, guid: b209e47bb69d6de4189dab73f0b730dd, type: 3}
-      propertyPath: text
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 2869919478339899662, guid: b209e47bb69d6de4189dab73f0b730dd, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
