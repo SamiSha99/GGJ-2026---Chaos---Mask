@@ -5,9 +5,9 @@ using Random = System.Random;
 
 public class MaskingManager : MonoBehaviour
 {
-    public Transform playerTransform;
-    public Transform cameraTransform;
-    public Animator animator;
+    private Transform playerTransform;
+    private Transform cameraTransform;
+    private Animator animator;
     public RuntimeAnimatorController defaultController;
     public RuntimeAnimatorController maskController;
 
@@ -22,6 +22,8 @@ public class MaskingManager : MonoBehaviour
     private void Start()
     {
         animator = GetComponent<Animator>();
+        playerTransform = transform;
+        cameraTransform = Camera.main.transform;
     }
 
     private void Update()

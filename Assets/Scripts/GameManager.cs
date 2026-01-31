@@ -11,11 +11,11 @@ public class GameManager : MonoBehaviour
     static private GameManager instance;
     public TextMeshProUGUI text;
     public float deathDelay = 2f;
-    
-    
+
+
     private int coinsCollected = 0;
-    
-    
+
+
     public static GameManager Instance
     {
         get
@@ -24,16 +24,16 @@ public class GameManager : MonoBehaviour
             {
                 instance = FindObjectOfType<GameManager>();
             }
-            return  instance;
+            return instance;
         }
     }
 
     void Start()
     {
-        if(player == null)
+        if (player == null)
             player = FindObjectOfType<PlayerMovement>().GetComponent<PlayerMovement>();
     }
-    
+
 
     public IEnumerator Die()
     {
@@ -45,9 +45,10 @@ public class GameManager : MonoBehaviour
     public void AddCoins()
     {
         coinsCollected++;
-        text.SetText($"{coinsCollected}");
+
+        GameObject.Find("Coin " + coinsCollected).GetComponent<Image>().color = Color.white;
     }
 
-    
-    
+
+
 }

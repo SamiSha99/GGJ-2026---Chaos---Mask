@@ -1,21 +1,16 @@
 using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class FlagFinish : MonoBehaviour
 {
-    private MainMenu mainMenu;
-
-    private void Start()
-    {
-        mainMenu = FindAnyObjectByType<MainMenu>().GetComponent<MainMenu>();
-    }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
             Debug.Log("Finish!");
-            mainMenu.PlayGame();
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
 }

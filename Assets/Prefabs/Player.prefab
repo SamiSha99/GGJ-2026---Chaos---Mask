@@ -294,6 +294,8 @@ MonoBehaviour:
   playerTransform: {fileID: 5621584382620277926}
   cameraTransform: {fileID: 0}
   animator: {fileID: 0}
+  defaultController: {fileID: 9100000, guid: f2cab3cc55e412343a0414eb91e791dd, type: 2}
+  maskController: {fileID: 22100000, guid: c3355ec8753933b42b5e75aa181dd401, type: 2}
   currentMaskPosition: 0
   teleportSounds:
   - {fileID: 8300000, guid: c7bdd852b4689ec4aa5704fc5b36e947, type: 3}
