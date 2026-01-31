@@ -119,17 +119,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!114 &114354589 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3750611228910600078, guid: 8dcc8d01464c03645b5a487280b717ac, type: 3}
-  m_PrefabInstance: {fileID: 8267912006389587537}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &157710351
 GameObject:
   m_ObjectHideFlags: 0
@@ -6662,7 +6651,7 @@ TilemapRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1530800351
+  m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
@@ -7175,7 +7164,7 @@ Tilemap:
       m_AnimatedSprites:
       - {fileID: -8003906554491563137, guid: e2f762d9df755a044abe93cf09d6bb33, type: 3}
       - {fileID: 403813026361821555, guid: e2f762d9df755a044abe93cf09d6bb33, type: 3}
-      m_AnimationSpeed: 1.25
+      m_AnimationSpeed: 1.2500001
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: 6, y: -5, z: 0}
@@ -8959,7 +8948,7 @@ PrefabInstance:
     - target: {fileID: 283438875627746474, guid: b209e47bb69d6de4189dab73f0b730dd, type: 3}
       propertyPath: text
       value: 
-      objectReference: {fileID: 114354589}
+      objectReference: {fileID: 0}
     - target: {fileID: 2869919478339899662, guid: b209e47bb69d6de4189dab73f0b730dd, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
