@@ -46,6 +46,9 @@ public class MaskingManager : MonoBehaviour
             animator.runtimeAnimatorController = maskController;
             playerTransform.position = new Vector3(distance + playerTransform.localPosition.x, playerTransform.localPosition.y, playerTransform.localPosition.z);
             cameraTransform.position = new Vector3(distance + cameraTransform.localPosition.x, cameraTransform.localPosition.y, cameraTransform.localPosition.z);
+            Transform trans = playerTransform;
+            Transform key = trans.gameObject.GetComponent<PlayerMovement>().key;
+            if(key) key.transform.position = playerTransform.position;
         }
         else if (currentMaskPosition == MaskPosition.Right)
         {
@@ -53,7 +56,9 @@ public class MaskingManager : MonoBehaviour
             animator.runtimeAnimatorController = defaultController;
             playerTransform.position = new Vector3(playerTransform.localPosition.x - distance, playerTransform.localPosition.y, playerTransform.localPosition.z);
             cameraTransform.position = new Vector3(cameraTransform.localPosition.x - distance, cameraTransform.localPosition.y, cameraTransform.localPosition.z);
-
+            Transform trans = playerTransform;
+            Transform key = trans.gameObject.GetComponent<PlayerMovement>().key;
+            if(key) key.transform.position = playerTransform.position;
         }
     }
 

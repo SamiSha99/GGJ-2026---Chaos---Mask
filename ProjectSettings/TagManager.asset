@@ -9,6 +9,7 @@ TagManager:
   - Coin
   - Ladder
   - Water
+  - Lock
   layers:
   - Default
   - TransparentFX

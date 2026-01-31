@@ -23,7 +23,7 @@ public class Key : MonoBehaviour
         {
             
            //transform.position += Vector3.MoveTowards(transform.position,player.transform.position,0)
-            Vector3 direction = new Vector3(directionx, directiony+1.5f, 1);
+            Vector3 direction = new Vector3(directionx, directiony, 1);
             transform.position +=  direction * (player.moveSpeed*player.moveSpeed*5 * Time.deltaTime); 
 
         }
@@ -35,6 +35,7 @@ public class Key : MonoBehaviour
         if (collision.tag == "Player")
         {
             follow = true;
+            collision.gameObject.GetComponent<PlayerMovement>().key = transform;
         }
         else follow = false;
     }
