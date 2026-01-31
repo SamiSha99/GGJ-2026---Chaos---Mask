@@ -18,9 +18,12 @@ public class SoundsManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
         if(musicSFX == null)
             return;
+    }
+    private void Start()
+    {
         PlayMusic(musicBackground);
     }
-    
+
     public void PlaySingle(AudioClip clip)
     {
         soundSFX.clip = clip;
