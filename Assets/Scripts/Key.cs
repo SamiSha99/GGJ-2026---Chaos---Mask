@@ -8,44 +8,41 @@ public class Key : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        if(player == null)
+        if (player == null)
             player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (!follow) return;
         float directionx = player.transform.position.x - transform.position.x;
-        float directiony = player.transform.position.y - transform.position.y;
+        float directiony = player.transform.position.y - transform.position.y + 1.75f;
+        Vector3 direction = new Vector3(directionx, directiony, 1);
+        transform.position += direction * (player.moveSpeed * 5 * Time.deltaTime);
 
-        
-        if (follow)
-        {
-            
-           //transform.position += Vector3.MoveTowards(transform.position,player.transform.position,0)
-            Vector3 direction = new Vector3(directionx, directiony, 1);
-            transform.position +=  direction * (player.moveSpeed*player.moveSpeed*5 * Time.deltaTime); 
 
-        }
-        
     }
 
     void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.tag == "Player")
         {
-            follow = true;
-            collision.gameObject.GetComponent<PlayerMovement>().key = transform;
+            follorPlayer();
         }
-        else follow = false;
     }
-    
+
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Player")
         {
-            follow = false;
+            follorPlayer();
         }
-        else follow = true;
+    }
+
+    void follorPlayer()
+    {
+        follow = true;
+        player.key = transform;
     }
 }

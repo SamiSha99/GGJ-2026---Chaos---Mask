@@ -176,7 +176,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Sami Shakkour: '
+  m_text: '<size=64>Sami Shakkour</size>
+
+    Lead Dev, Level Designer'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2898838972b60fc4e9b8c0a428f2b3b0, type: 2}
   m_sharedMaterial: {fileID: -8497654400043870250, guid: 2898838972b60fc4e9b8c0a428f2b3b0, type: 2}
@@ -211,7 +213,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 512
+  m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_characterHorizontalScale: 1
@@ -242,7 +244,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -3.3016357, w: 0}
+  m_margin: {x: 0, y: 0, z: -445.93054, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -340,8 +342,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30
-  m_fontSizeBase: 30
+  m_fontSize: 48
+  m_fontSizeBase: 48
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2776,7 +2778,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Ghanem Bhouti:'
+  m_text: '<size=64>Ghanem Bhouti</size>
+
+    Dev, Animations'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2898838972b60fc4e9b8c0a428f2b3b0, type: 2}
   m_sharedMaterial: {fileID: -8497654400043870250, guid: 2898838972b60fc4e9b8c0a428f2b3b0, type: 2}
@@ -2811,7 +2815,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 512
+  m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_characterHorizontalScale: 1
@@ -2842,7 +2846,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -3.3016357, w: 0}
+  m_margin: {x: 241.36383, y: 0, z: -708.49927, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -2913,7 +2917,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Simon Shakkour: Menus'
+  m_text: '<size=64>Simon Shakkour</size>
+
+    Dev, UI Design'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2898838972b60fc4e9b8c0a428f2b3b0, type: 2}
   m_sharedMaterial: {fileID: -8497654400043870250, guid: 2898838972b60fc4e9b8c0a428f2b3b0, type: 2}
@@ -2948,7 +2954,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 512
+  m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_characterHorizontalScale: 1
@@ -2979,7 +2985,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -3.3016357, w: 0}
+  m_margin: {x: 242.80151, y: 0, z: -653.20544, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -3050,7 +3056,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Mohammad Alem: '
+  m_text: '<size=64>Mohammad Alem</size>
+
+    Dev, Programming, sound'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2898838972b60fc4e9b8c0a428f2b3b0, type: 2}
   m_sharedMaterial: {fileID: -8497654400043870250, guid: 2898838972b60fc4e9b8c0a428f2b3b0, type: 2}
@@ -3085,7 +3093,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 512
+  m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_characterHorizontalScale: 1
@@ -3116,7 +3124,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -3.3016357, w: 0}
+  m_margin: {x: 0, y: 0, z: -456.22388, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0

@@ -51,4 +51,15 @@ public class PlayerMovement : MonoBehaviour
         rb.AddForce(Vector2.up * jumpForce);
     }
 
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Lock") && key.gameObject)
+        {
+            Destroy(collision.gameObject);
+            Collider2D c = key.gameObject.GetComponent<Collider2D>();
+            c.enabled = false;
+            if(key.gameObject) Destroy(key.gameObject); // just in case some bs
+        }
+    }
+
 }
