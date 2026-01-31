@@ -11,7 +11,12 @@ GameObject:
   - component: {fileID: 5340921074580169922}
   - component: {fileID: 8698043739175942046}
   - component: {fileID: 7952762256138617759}
+<<<<<<< Updated upstream
   - component: {fileID: 2551667691349615771}
+=======
+  - component: {fileID: 6743573752504908560}
+  - component: {fileID: 2086122151492939308}
+>>>>>>> Stashed changes
   m_Layer: 0
   m_Name: Flag
   m_TagString: Untagged
@@ -111,8 +116,13 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+<<<<<<< Updated upstream
 --- !u!61 &2551667691349615771
 BoxCollider2D:
+=======
+--- !u!70 &6743573752504908560
+CapsuleCollider2D:
+>>>>>>> Stashed changes
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -141,6 +151,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
+<<<<<<< Updated upstream
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_CompositeOperation: 0
@@ -157,3 +168,24 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+=======
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: -0.010564327, y: 0.040144086}
+  m_Size: {x: 0.97887135, y: 1.0802882}
+  m_Direction: 0
+--- !u!114 &2086122151492939308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5564556369755087633}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4527e420bfa9b34f95ed5c4cace4b0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+>>>>>>> Stashed changes
