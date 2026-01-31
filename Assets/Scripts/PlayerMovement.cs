@@ -12,7 +12,8 @@ public class PlayerMovement : MonoBehaviour
     private Animator animator;
     private SpriteRenderer spriteRenderer;
     private GroundCheck groundCheck;
-
+    [HideInInspector]
+    public Transform key;
     public AudioClip jumpSound;
     void Start()
     {
