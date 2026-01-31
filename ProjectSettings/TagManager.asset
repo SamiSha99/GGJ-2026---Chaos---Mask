@@ -55,6 +55,9 @@ TagManager:
   - name: Entity
     uniqueID: 3765893017
     locked: 0
+  - name: Coin
+    uniqueID: 667499187
+    locked: 0
   - name: Decor Front
     uniqueID: 2813758133
     locked: 0
