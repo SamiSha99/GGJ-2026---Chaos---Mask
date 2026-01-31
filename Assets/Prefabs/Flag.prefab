@@ -170,3 +170,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4527e420bfa9b34f95ed5c4cace4b0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  delay: 1
+  applauseSound: {fileID: 8300000, guid: 398d11eb87da60140b1b1ec5f24e0716, type: 3}

@@ -146,7 +146,6 @@ MonoBehaviour:
   musicBackground: {fileID: 8300000, guid: 61d031dd219042f4f9f0a41313b4db94, type: 3}
   soundSFX: {fileID: 1287398686169476575}
   musicSFX: {fileID: 1287398686169476575}
-  delay: 5
 --- !u!82 &2973259372149560992
 AudioSource:
   m_ObjectHideFlags: 0
@@ -162,7 +161,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 0.3
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
